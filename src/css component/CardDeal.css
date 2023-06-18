@@ -1,0 +1,73 @@
+.cardDeal .text,
+.cardDeal .image {
+  width: 50%;
+  padding: 0 30px;
+  position: relative;
+}
+
+.cardDeal .text h2 {
+  line-height: 1.7;
+  font-weight: 600;
+  font-size: 45px;
+}
+
+.cardDeal .text p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffffb3;
+  line-height: 1.7;
+}
+
+.cardDeal .text button {
+  width: 130px;
+  height: 54px;
+  background: linear-gradient(
+    157.81deg,
+    #def9fa -43.27%,
+    #bef3f5 -21.24%,
+    #9dedf0 12.19%,
+    #7de7eb 29.82%,
+    #5ce1e6 51.94%,
+    #33bbcf 90.29%
+  );
+  transition: var(--transition);
+  border-radius: 10px;
+  font-weight: 600;
+  color: black;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.cardDeal .image img {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .cardDeal .text,
+  .cardDeal .image {
+    width: 100%;
+    padding: 0;
+  }
+
+  .cardDeal .text h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .cardDeal .text button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 10px 0;
+  }
+
+  .cardDeal .image {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .cardDeal .image img {
+    width: 70%;
+  }
+}

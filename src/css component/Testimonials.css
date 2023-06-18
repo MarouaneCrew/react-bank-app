@@ -1,0 +1,106 @@
+.testemonials .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testemonials .heading h2 {
+  width: 40%;
+  line-height: 1.7;
+  font-weight: 600;
+  font-size: 45px;
+}
+
+.testemonials .heading p {
+  width: 50%;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffffb3;
+  line-height: 1.7;
+}
+
+.testemonials .people {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testemonials .people > div {
+  padding: 40px;
+  border: 1px solid #6d6d6d4f;
+  border-radius: 20px;
+}
+
+.testemonials .people .herman {
+  background: var(--bg-discount-gradient);
+  box-shadow: 0px 20px 100px -10px rgb(66 71 91 / 10%);
+  border-radius: 20px;
+}
+
+.testemonials .people > div .speech {
+  margin: 30px 0;
+  line-height: 1.7;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  height: 108px;
+}
+
+.testemonials .people > div .person {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  height: 60px;
+}
+
+.testemonials .people > div .person .image {
+  height: 100%;
+}
+
+.testemonials .people > div .person .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.testemonials .people > div .person .who {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.testemonials .people > div .person .who h4,
+.testemonials .people > div .person .who p {
+  margin: 5px 0px 5px;
+}
+
+.testemonials .people > div .person .who p {
+  opacity: 0.5;
+}
+
+@media (max-width: 1200px) {
+  .testemonials .heading h2 {
+    width: 50%;
+    font-size: 35px;
+  }
+
+  .testemonials .heading p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testemonials .heading {
+    flex-direction: column;
+  }
+
+  .testemonials .heading h2 {
+    width: 90%;
+    margin: 0;
+  }
+
+  .testemonials .heading p {
+    width: 90%;
+    font-size: 18px;
+  }
+}

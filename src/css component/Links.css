@@ -1,0 +1,65 @@
+.links .box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.links .box > div:first-of-type {
+  width: 340px;
+}
+
+.links .box > div:not(:first-of-type) {
+  padding-left: 100px;
+}
+
+.links .box .logo p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffffb3;
+  line-height: 1.7;
+}
+
+.links .box > div h4 {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.links .box > div a {
+  color: #ffffffb3;
+  margin: 15px 0;
+  display: block;
+  transition: var(--transition);
+}
+
+.links .box > div a:hover {
+  color: var(--cyano);
+}
+
+@media (max-width: 1200px) {
+  .links .box > div:nth-of-type(4) {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 992px) {
+  .links .box > div:nth-of-type(3),
+  .links .box > div:nth-of-type(2) {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .links .box > div:first-of-type {
+    width: unset;
+  }
+
+  .links .box > div {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .links .box {
+    gap: 0;
+  }
+}

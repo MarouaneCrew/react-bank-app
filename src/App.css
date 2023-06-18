@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* media-query */
+
+@media (max-width: 576px) {
+  .container {
+    width: 98%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+
+.App {
+  background-color: var(--black);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+  background-color: var(--black);
+  padding: 24px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero,
+.stats,
+.business,
+.billing,
+.cardDeal,
+.testemonials,
+.feeadBackCard,
+.cta,
+.links {
+  padding: 20px 0;
+}
+
+.hero {
+  overflow: hidden;
+}
+
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.business .container,
+.billing .container,
+.cardDeal .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.business .container .text,
+.business .container .features {
+  width: 50%;
+  padding: 0 30px;
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .business .container {
+    flex-direction: column;
+    gap: 30px 0;
   }
-  to {
-    transform: rotate(360deg);
+  .business .container .text,
+  .business .container .features {
+    width: 100%;
+    padding: 0;
+  }
+
+  .business .container .features {
+    padding: 0;
+  }
+}
+
+.billing .container > div {
+  width: 45%;
+}
+
+@media (max-width: 992px) {
+  .business .container,
+  .billing .container,
+  .cardDeal .container {
+    flex-direction: column;
+  }
+
+  .billing .container > div {
+    width: 100%;
+  }
+
+  .billing .container .apps {
+    text-align: center;
+  }
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #a7a7a733;
+  padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+  }
+
+  .footer .container p {
+    text-align: center;
   }
 }

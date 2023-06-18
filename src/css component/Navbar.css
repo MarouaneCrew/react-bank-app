@@ -1,0 +1,94 @@
+nav,
+nav .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+nav .image {
+  cursor: pointer;
+}
+
+nav .image img {
+  width: 124px;
+  height: 32px;
+}
+
+nav .links li:not(:last-of-type) a {
+  margin-right: 40px;
+}
+
+nav .links li a {
+  transition: var(--transition);
+}
+
+nav .links li a:hover {
+  color: var(--cyano);
+}
+
+nav .menu {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav .menu {
+    display: block;
+  }
+
+  nav .links {
+    position: absolute;
+    right: -15px;
+    flex-direction: column;
+    top: 2.5rem;
+    align-items: start;
+    background: linear-gradient(
+      144.39deg,
+      #ffffff -278.56%,
+      #6d6d6d -78.47%,
+      #11101d 91.61%
+    );
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    transform: translateY(50%);
+    transition: var(--transition);
+    opacity: 0;
+    z-index: -1;
+  }
+
+  nav .links.closeBtn {
+    right: -15px;
+    transform: translateY(0%);
+    transition: var(--transition);
+    opacity: 1;
+    z-index: 2;
+  }
+
+  nav .links li {
+    padding: 5px 20px;
+    transition: var(--transition);
+  }
+
+  nav .links li:hover {
+    transform: translateX(10px);
+    color: var(--cyano);
+  }
+
+  nav .links li a {
+    transition: var(--transition);
+  }
+
+  nav .links li:hover a {
+    color: #5ce1e6;
+  }
+
+  nav .links li:not(:last-of-type) a {
+    margin-right: 0px;
+  }
+
+  nav .menu img {
+    transition: var(--transition);
+  }
+}

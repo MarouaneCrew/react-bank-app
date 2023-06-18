@@ -1,0 +1,53 @@
+.billing .image img {
+  width: 100%;
+}
+
+.billing .text h2 {
+  line-height: 1.7;
+  font-weight: 600;
+  font-size: 45px;
+}
+
+.billing .text p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffffb3;
+  line-height: 1.7;
+}
+
+.billing .apps {
+  margin: 40px auto 0;
+}
+
+.billing .apps img {
+  width: 145px;
+  height: 44px;
+  object-fit: contain;
+  background-color: black;
+  cursor: pointer;
+}
+
+.billing .apps img[alt="playstore"] {
+  margin-left: 20px;
+}
+
+@media (max-width: 992px) {
+  .billing .text h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .billing .text h2 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .billing .apps img[alt="playstore"] {
+    margin-left: 0;
+    display: block;
+    margin: 10px auto;
+  }
+}
